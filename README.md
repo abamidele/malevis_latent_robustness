@@ -82,12 +82,19 @@ This notebook expects a directory with `train/` and `val/` subfolders (Keras-sty
 
 DATA_ROOT/
 ├── train/
+
 │   ├── class_1/
+
 │   ├── class_2/
+
 │   └── ...
+
 └── val/
+
 ├── class_1/
+
 ├── class_2/
+
 └── ...
 
 ````
