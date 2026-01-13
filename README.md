@@ -55,7 +55,7 @@ This project investigates **robust malware-family classification** by learning c
 
 ## Repository Contents
 
-
+```
 
 .
 ├── malevis_latent_pertubation_classification.ipynb
@@ -97,14 +97,14 @@ DATA_ROOT/
 
 └── ...
 
-````
+
 
 In the notebook, update:
-
+```
 DATA_ROOT = r"/path/to/malevis_train_val_300x300"
 TRAIN_DIR = os.path.join(DATA_ROOT, "train")
 VAL_DIR   = os.path.join(DATA_ROOT, "val")
-
+````
 
 > Note: The notebook resizes images to a configurable `IMG_H x IMG_W` (default used in the code is often `128x128` for efficiency).
 
