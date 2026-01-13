@@ -2,8 +2,11 @@
 # MaleVis Latent Perturbation Classification (VAE → Latent Classifier Robustness)
 
 > **TL;DR** Train a **VAE** on **MaleVis** images, encode samples into **latent space** (`z_mean`), then train a **latent classifier** (e.g., Transformer/RNN/CNN-on-latents) and evaluate robustness under:
+
 > - **Latent noise perturbations** (Gaussian / Uniform / Dropout / Salt–Pepper)
+
 > - **Adversarial attacks via ART** (FGSM / PGD / HopSkipJump / Boundary)
+
 
 This repository is centered around the notebook:
 - `malevis_latent_pertubation_classification.ipynb`
@@ -33,27 +36,40 @@ This project investigates **robust malware-family classification** by learning c
 ## Method Summary
 **Pipeline**
 1. Load MaleVis images from `train/` and `val/` directories (stable label mapping based on train classes).
+
 2. Train an image **VAE** with **KL warmup**.
+
 3. Encode images → deterministic latent vectors (`z_mean`).
+
 4. Train latent classifier (e.g., **Latent Transformer**) on `z_mean`.
+
 5. Evaluate:
+
    - Clean latent performance
+
    - Robustness under **latent noise** (Gaussian/Uniform/Dropout/Salt–Pepper)
+
    - Robustness under **ART adversarial attacks** (FGSM/PGD/HSJ/Boundary)
 
 ---
 
 ## Repository Contents
-Recommended structure (adjust to your repo as needed):
+
 ```
 
 .
 ├── malevis_latent_pertubation_classification.ipynb
+
 ├── outputs/
+
 │   ├── latent_dim_sweep_results.csv
+
 │   └── malevis_latent_transformer_noise_adv_results.csv
-├── data/                     # NOT committed (put dataset here or link externally)
-├── requirements.txt          # optional
+
+├── data/                     
+
+├── requirements.txt          
+
 └── README.md
 
 ```
