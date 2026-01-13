@@ -1,4 +1,4 @@
-```markdown
+
 # MaleVis Latent Perturbation Classification (VAE → Latent Classifier Robustness)
 
 > **TL;DR** Train a **VAE** on **MaleVis** images, encode samples into **latent space** (`z_mean`), then train a **latent classifier** (e.g., Transformer/RNN/CNN-on-latents) and evaluate robustness under:
@@ -55,7 +55,7 @@ This project investigates **robust malware-family classification** by learning c
 
 ## Repository Contents
 
-```
+
 
 .
 ├── malevis_latent_pertubation_classification.ipynb
